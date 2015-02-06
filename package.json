@@ -1,6 +1,6 @@
 {
 	"name": "sails-elasticsearch",
-	"version": "0.10.2",
+	"version": "0.10.3",
 	"description": "Elasticsearch adapter for Sails / Waterline",
 	"main": "./lib/adapter.js",
 	"scripts": {
@@ -14,7 +14,16 @@
 		"sails.js",
 		"plugin"
 	],
-	"author": "Marcos Sanz <marcos.sanz@13genius.com>",
+	"contributors": [
+    {
+      "name": "Marcos Sanz",
+      "email": "marcos.sanz@13genius.com"
+    },
+    {
+      "name": "Gaspar Vajo",
+      "email": "vajogaspar@gmail.com"
+    }
+  ],
 	"license": "MIT",
 	"readmeFilename": "README.md",
 	"repository": {
@@ -25,7 +34,8 @@
 		"async": "~0.8.0",
 		"lodash": "~2.4.1",
 		"elasticsearch": "3.0.0",
-		"waterline-errors": "~0.10.0"
+		"waterline-errors": "~0.10.0",
+		"waterline-cursor": "~0.0.5"
 	},
 	"devDependencies": {
 		"waterline-adapter-tests": "~0.10.0",
@@ -35,7 +45,9 @@
 	"waterlineAdapter": {
 		"type": "elasticsearch",
 		"interfaces": [
-			"semantic"
+			"semantic",
+      "queryable",
+      "associations"
 		],
 		"waterlineVersion": "~0.10.0"
 	}
